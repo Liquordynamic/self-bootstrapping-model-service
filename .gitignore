@@ -182,5 +182,4 @@ Thumbs.db
 
 # SBMS relared files and directories #
 case/
-resource/model/
-resource/storage/
+src/sbms/resource/
