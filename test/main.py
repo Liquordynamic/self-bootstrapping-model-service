@@ -1,12 +1,7 @@
-import os
 import sys
+import os
 
-CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-PARENT_DIR = os.path.abspath(os.path.join(CURRENT_DIR, '..'))
-SRC_DIR = os.path.join(PARENT_DIR, 'src') 
-
-if SRC_DIR not in sys.path:
-    sys.path.insert(0, SRC_DIR)
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
 
 import sbms
 
@@ -14,6 +9,9 @@ import sbms
 sbms.registry.update_registry({
     '/api/v0/fe/hello': os.path.abspath('./hello.trigger.py')
 })
+
+# Set configuration
+sbms.config.DIR_MODEL_CASE = os.path.abspath('./case')
 
 # Init SBMS APP
 sbms_app = sbms.init(

@@ -1,0 +1,20 @@
+[project]
+name = "sbms"
+version = "0.1.0"
+description = "A parallelizable framework designed for the execution of complex geographical model services on a single backend machine."
+authors = [
+    {name = "YcSoku",email = "dsssyc02@gmail.com"}
+]
+license = {text = "BSD-3-Clause license"}
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi (>=0.115.8,<0.116.0)",
+    "uvicorn (>=0.34.0,<0.35.0)",
+    "portalocker (>=3.1.1,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
